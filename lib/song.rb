@@ -8,6 +8,7 @@ class Song
   def initialize(name,artist,genre)
     @name = name
     @artist = artist
+    @@artists << artist
     @genre = genre
     @@genres << genre
     @@count +=1
@@ -21,5 +22,8 @@ class Song
     @@genres.uniq
   end
   
+  def self.artists
+    
+  end
   
 end
