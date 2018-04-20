@@ -5,6 +5,7 @@ class Song
   @@genres = []
   @@artists = []
   @@genre_count ={}
+  @@artist_count = {}
   
   def initialize(name,artist,genre)
     @name = name
@@ -35,7 +36,8 @@ class Song
   end
   
   def self.artist_count
-    
+    @@artists.each do |artist|
+      @@artist_count[artist] = @@artists.count(artist)
   end
   
   
